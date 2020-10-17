@@ -7,7 +7,7 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Template", "Template.sqlpro
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Template_Tests", "..\Template_Tests\Template_Tests.sqlproj", "{8B5FA818-1418-4733-A7DB-2FB469025381}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateDbUp", "..\TemplateDbUp\TemplateDbUp.csproj", "{A742EE54-F0F2-4158-8112-F39B3892B7C1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template_DbUp", "..\Template_DbUp\Template_DbUp.csproj", "{A742EE54-F0F2-4158-8112-F39B3892B7C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

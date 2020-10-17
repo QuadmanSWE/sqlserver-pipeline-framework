@@ -4,7 +4,7 @@ using System;
 using System.Configuration;
 using System.Reflection;
 
-namespace TemplateDbUp
+namespace Template_DbUp
 {
     class Program
     {
