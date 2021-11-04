@@ -52,7 +52,8 @@ try {
         ".\Template_Tests\Template_Tests.sqlproj",
         ".\Template_DbUp\program.cs",
         ".\Template.Build.ps1",
-        ".\bootstrap.ps1"
+        ".\bootstrap.ps1",
+        ".\example - write settings file.ps1"
     )
     if (test-path $filesToModify) {
         foreach ($file in $filesToModify) {
