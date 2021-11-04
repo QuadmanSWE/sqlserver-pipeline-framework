@@ -50,7 +50,9 @@ try {
         ".\Template\Template.sln",
         ".\Template\Template.sqlproj",
         ".\Template_Tests\Template_Tests.sqlproj",
-        ".\Template_DbUp\program.cs"
+        ".\Template_DbUp\program.cs",
+        ".\Template.Build.ps1",
+        ".\bootstrap.ps1"
     )
     if (test-path $filesToModify) {
         foreach ($file in $filesToModify) {
@@ -65,7 +67,9 @@ try {
         ".\Template_DbUp\Template_DbUp.csproj",
         ".\Template",
         ".\Template_Tests",
-        ".\Template_DbUp"
+        ".\Template_DbUp",
+        ".\Template.Build.ps1"
+        
     )
     if (test-path $ItemsToRename) {
         foreach ($item in $ItemsToRename) {
@@ -79,7 +83,7 @@ try {
     git add .
     git commit -m "Copied from https://github.com/QuadmanSWE/sqlserver-pipeline-framework"
     Write-Host 'Repo cloning successful!'
-    
+    Write-Host 'To start developing run .\bootstrap.ps1 in your new repo.'
 }
 
 catch {

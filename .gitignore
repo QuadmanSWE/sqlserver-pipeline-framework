@@ -338,3 +338,9 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+
+# Project specific
+/output
+sapassword.env
+settings.xml
+modules.sql
