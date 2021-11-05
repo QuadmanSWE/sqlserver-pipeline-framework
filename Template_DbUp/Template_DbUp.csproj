@@ -11,4 +11,13 @@
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <EmbeddedResource Include="SchemaMigration\**\*.sql" />
+    <EmbeddedResource Include="Idempotent\**\*.sql" />
+  </ItemGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="powershell -NoProfile -ExecutionPolicy RemoteSigned -file $(ProjectDir)regenerate_modules_script.ps1&quot;" />
+  </Target>
+
 </Project>
