@@ -62,7 +62,7 @@ try {
     }
 
     [string]$portstring = Get-Random -Minimum 11000 -Maximum 19000
-    $filestosetport = @(".\example - write settings file.ps1","docker-compose.yaml")
+    $filestosetport = @(".\example - write settings file.ps1","docker-compose.yml")
     if (test-path $filestosetport) {
         foreach ($file in $filestosetport) {
             (Get-Content $file) -replace '<sqlextport>', $portstring | Set-Content $file
