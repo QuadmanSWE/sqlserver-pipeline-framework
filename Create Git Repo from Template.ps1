@@ -50,11 +50,22 @@ try {
         ".\Template\Template.sln",
         ".\Template\Template.sqlproj",
         ".\Template_Tests\Template_Tests.sqlproj",
-        ".\Template_DbUp\program.cs"
+        ".\Template_DbUp\program.cs",
+        ".\Template.Build.ps1",
+        ".\bootstrap.ps1",
+        ".\example - write settings file.ps1"
     )
     if (test-path $filesToModify) {
         foreach ($file in $filesToModify) {
             (Get-Content $file) -replace 'Template', $reponame | Set-Content $file
+        }
+    }
+
+    [string]$portstring = Get-Random -Minimum 11000 -Maximum 19000
+    $filestosetport = @(".\example - write settings file.ps1","docker-compose.yml")
+    if (test-path $filestosetport) {
+        foreach ($file in $filestosetport) {
+            (Get-Content $file) -replace '<sqlextport>', $portstring | Set-Content $file
         }
     }
 
@@ -65,7 +76,9 @@ try {
         ".\Template_DbUp\Template_DbUp.csproj",
         ".\Template",
         ".\Template_Tests",
-        ".\Template_DbUp"
+        ".\Template_DbUp",
+        ".\Template.Build.ps1"
+        
     )
     if (test-path $ItemsToRename) {
         foreach ($item in $ItemsToRename) {
@@ -79,7 +92,7 @@ try {
     git add .
     git commit -m "Copied from https://github.com/QuadmanSWE/sqlserver-pipeline-framework"
     Write-Host 'Repo cloning successful!'
-    
+    Write-Host 'To start developing run .\bootstrap.ps1 in your new repo.'
 }
 
 catch {
