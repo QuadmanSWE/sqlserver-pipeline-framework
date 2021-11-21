@@ -36,6 +36,7 @@ You will also have an entire build pipeline on your local machine.
 - SQL Server Data Tools for Visual Studio.
 - PowerShell
 - Docker or SQL Server express or higher
+- dotnet core 3.1 or higher
 
 ## Developing with the framework
 
