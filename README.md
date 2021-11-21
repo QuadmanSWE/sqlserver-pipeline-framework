@@ -37,3 +37,18 @@ You will also have an entire build pipeline on your local machine.
 - PowerShell
 - Docker or SQL Server express or higher
 
+## Developing with the framework
+
+### Changes
+
+### Migration scripts
+
+### About SQL modules
+
+### Unit tests
+
+
+# kvar att göra
+generate documentation of procs
+choose docker sql server och localdb
+Write about how to use the framework
