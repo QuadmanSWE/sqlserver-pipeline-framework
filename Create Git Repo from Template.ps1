@@ -54,7 +54,8 @@ try {
         ".\Template.Build.ps1",
         ".\bootstrap.ps1",
         ".\example - write settings file.ps1",
-        ".\Template_DbUp\regenerate_modules_script.ps1"
+        ".\Template_DbUp\regenerate_modules_script.ps1",
+        ".\DataExtractor\export merge statements.ps1"
     )
     if (test-path $filesToModify) {
         foreach ($file in $filesToModify) {
